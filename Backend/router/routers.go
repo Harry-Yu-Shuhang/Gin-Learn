@@ -3,7 +3,6 @@ package router
 import (
 	"gin-learn/controllers"
 	"gin-learn/pkg/logger"
-	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
@@ -17,14 +16,20 @@ func Router() *gin.Engine { //要大写，公有，别的地方要用
 
 	user := r.Group("/user")
 	{
-		user.GET("/info/:id/:name", controllers.UserController{}.GetUserInfo) //:id可以通过ctx传入id
-		user.POST("/list", controllers.UserController{}.GetList)
-		user.PUT("/add", func(ctx *gin.Context) {
-			ctx.String(http.StatusOK, "User Add")
-		})
-		user.DELETE("/delete", func(ctx *gin.Context) {
-			ctx.String(http.StatusOK, "User Delete")
-		})
+		user.GET("/info/:id", controllers.UserController{}.GetUserSingle)
+		//:id 通过ctx传入id，gin框架会自动传入 *gin.Context 到 controllers.UserController{}.GetUserInfo 方法中
+		user.GET("/list", controllers.UserController{}.GetList)
+		user.GET("/list/test", controllers.UserController{}.GetUserListTest)
+		user.POST("/add", controllers.UserController{}.AddUser)
+		user.PUT("/update", controllers.UserController{}.UpdateUser)
+		user.DELETE("/delete", controllers.UserController{}.DeleteUser)
+		// user.PUT("/add", func(ctx *gin.Context) {
+		// 	ctx.String(http.StatusOK, "User Add")
+		// })
+
+		// user.DELETE("/delete", func(ctx *gin.Context) {
+		// 	ctx.String(http.StatusOK, "User Delete")
+		// })
 	}
 
 	order := r.Group("/order")
