@@ -66,15 +66,28 @@ func (u UserController) DeleteUser(ctx *gin.Context) {
 	ReturnSuccess(ctx, 0, "删除成功", true, 1)
 }
 
-func (u UserController) GetList(ctx *gin.Context) {
-	// logger.Write("日志信息", "user") //日志文件名以user开头
-	// defer func() {
-	// 	if err := recover(); err != nil { //加上后前端不返回错误，程序正常运行，但是后台打印
-	// 		fmt.Println("捕获异常:", err)
-	// 	}
-	// }() //匿名函数，立即执行。如果不加最后这个括号，不会立即执行。
-	num1 := 1
-	num2 := 0
-	num3 := num1 / num2
-	ReturnError(ctx, 4004, num3)
+func (u UserController) Register(ctx *gin.Context) {
+	//接受用户名，密码和确认密码
+	username := ctx.DefaultPostForm("username", "")
+	password := ctx.DefaultPostForm("password", "")
+	confirmPassword := ctx.DefaultPostForm("password", "")
+
+	if username == "" || password == "" || confirmPassword == "" {
+		ReturnError(ctx, 4001, "用户名或密码不能为空")
+		return
+	}
+
+	if password != confirmPassword {
+		ReturnError(ctx, 4001, "密码和确认密码不一致")
+		return
+	}
+	user, err := models.GetUserInfoByUserName(username)
+	if err != nil {
+		ReturnError(ctx, 4001, "数据库查询错误")
+	}
+	if user.ID != 0 { //初始化为0
+		ReturnError(ctx, 4001, "用户名已存在")
+	}
+	HashedPassword, _ := EnPwdCode([]byte(password)) //加密密码
+	_, err = models.AddNewUser(username, HashedPassword)
 }

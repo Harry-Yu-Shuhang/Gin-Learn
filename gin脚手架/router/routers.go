@@ -18,7 +18,6 @@ func Router() *gin.Engine { //要大写，公有，别的地方要用
 	{
 		user.GET("/info/:id", controllers.UserController{}.GetUserSingle)
 		//:id 通过ctx传入id，gin框架会自动传入 *gin.Context 到 controllers.UserController{}.GetUserInfo 方法中
-		user.GET("/list", controllers.UserController{}.GetList)
 		user.GET("/list/test", controllers.UserController{}.GetUserListTest)
 		user.POST("/add", controllers.UserController{}.AddUser)
 		user.PUT("/update", controllers.UserController{}.UpdateUser)
