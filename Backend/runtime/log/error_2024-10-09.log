@@ -1,0 +1,89 @@
+{"level":"error","msg":"","mysql connect error":"dial tcp 127.0.0.1:3307: connect: connection refused","time":"2024-10-09 23:02:51"}
+panic error time:2024-10-09 23:17:09
+[7 5 3 2 1 4 8 6]
+stacktrace from panic:goroutine 7 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+gin-learn/pkg/logger.Recover.func1()
+	/Users/shuhangyu/Desktop/Codes/Go/Gin-Learn/打榜后端/pkg/logger/logger.go:140 +0x228
+panic({0x1013bd280?, 0x14000146090?})
+	/usr/local/go/src/runtime/panic.go:785 +0x124
+gin-learn/controllers.PlayerController.GetRankByAid({}, 0x1014021e0?)
+	/Users/shuhangyu/Desktop/Codes/Go/Gin-Learn/打榜后端/controllers/player.go:41 +0x118
+github.com/gin-gonic/gin.(*Context).Next(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0x40
+gin-learn/router.Router.Sessions.func1(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-contrib/sessions@v1.0.1/sessions.go:54 +0x15c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+gin-learn/pkg/logger.Recover(0x14000162000)
+	/Users/shuhangyu/Desktop/Codes/Go/Gin-Learn/打榜后端/pkg/logger/logger.go:150 +0x6c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xb8
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x7c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xb8
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140001b0000, 0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x6c4
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140001b0000, {0x1014a2e08, 0x140002001c0}, 0x14000214000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x174
+net/http.serverHandler.ServeHTTP({0x1014a0d80?}, {0x1014a2e08?, 0x140002001c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0xbc
+net/http.(*conn).serve(0x14000150090, {0x1014a3b40, 0x14000220810})
+	/usr/local/go/src/net/http/server.go:2092 +0x4fc
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x3dc
+
+panic error time:2024-10-09 23:17:17
+[7 5 3 2 1 4 8 6]
+stacktrace from panic:goroutine 7 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+gin-learn/pkg/logger.Recover.func1()
+	/Users/shuhangyu/Desktop/Codes/Go/Gin-Learn/打榜后端/pkg/logger/logger.go:140 +0x228
+panic({0x1013bd280?, 0x14000146168?})
+	/usr/local/go/src/runtime/panic.go:785 +0x124
+gin-learn/controllers.PlayerController.GetRankByAid({}, 0x1014021e0?)
+	/Users/shuhangyu/Desktop/Codes/Go/Gin-Learn/打榜后端/controllers/player.go:41 +0x118
+github.com/gin-gonic/gin.(*Context).Next(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0x40
+gin-learn/router.Router.Sessions.func1(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-contrib/sessions@v1.0.1/sessions.go:54 +0x15c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+gin-learn/pkg/logger.Recover(0x14000162000)
+	/Users/shuhangyu/Desktop/Codes/Go/Gin-Learn/打榜后端/pkg/logger/logger.go:150 +0x6c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xb8
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x7c
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xb8
+github.com/gin-gonic/gin.(*Context).Next(...)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140001b0000, 0x14000162000)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x6c4
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140001b0000, {0x1014a2e08, 0x140002002a0}, 0x14000214140)
+	/Users/shuhangyu/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0x174
+net/http.serverHandler.ServeHTTP({0x1014a0d80?}, {0x1014a2e08?, 0x140002002a0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3210 +0xbc
+net/http.(*conn).serve(0x14000150090, {0x1014a3b40, 0x14000220810})
+	/usr/local/go/src/net/http/server.go:2092 +0x4fc
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x3dc
+
