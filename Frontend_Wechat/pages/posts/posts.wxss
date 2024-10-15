@@ -1,0 +1,94 @@
+/* pages/posts/posts.wxss */
+
+/* 对所有swiper应用 */
+swiper{
+  width: 100%;
+  height: 460rpx;
+}
+
+/* 对swiper下面所有image应用 */
+swiper image{
+  width: 100%;
+  height: 460rpx;
+}
+
+.post-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  /* margin-bottom: 40rpx; */
+  background-color: #fff;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 10rpx;
+}
+
+.post-author-info{
+  /* 上右下左 */
+  margin: 10rpx 0 20rpx 10rpx;
+  /* flex布局设置居中 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.post-author-avatar{
+  width: 60rpx;
+  height: 60rpx;
+  /* 设置圆形以及半径 */
+  border-radius: 50%;
+  /* vertical-align: middle; */
+}
+
+.post-author-name{
+  margin-left: 15rpx;
+  font-size: 26rpx;
+  /* vertical-align: middle; */
+}
+
+.post-date{
+  font-size: 20rpx; /* 设置较小的字体 */
+  color: #888; /* 设置为灰色 */
+  margin-left: 20rpx;
+}
+
+.post-title{
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  color: #333;
+}
+
+.post-image{
+  width: 100%;
+  height: 360rpx;
+  margin-bottom: 20rpx;
+}
+
+.post-abstract{
+  color: #666;
+  font-size: 28rpx;
+  margin-bottom: 15rpx;
+  margin-left: 10rpx;
+  line-height: 40rpx;
+  letter-spacing: 1px;
+}
+
+.post-popularity{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.post-like-icon{
+  /* height: 32rpx;
+  width: 32rpx; */
+  margin-right: 16rpx;
+}
+
+.post-like-count{
+  margin-right: 40rpx;
+  font-size: 26rpx;
+}

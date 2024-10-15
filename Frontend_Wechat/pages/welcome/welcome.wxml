@@ -1,0 +1,21 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <!-- open-data已不能单独使用，现在需要配合wx.getUserProfile(Object object) -->
+  <l-avatar class="l-avatar" placement="bottom" shape="circle" open-data="{{['userAvatarUrl']}}" size="200"/>
+
+  <block wx:if="{{!hasUserInfo}}">
+    <text class="hello-motto">点击下方按钮</text>
+    <l-button bind:tap="getUserProfile" l-class="lin-ui-start-button">开启二次元之旅</l-button>
+  </block>
+  
+  <!-- 如果已经获得用户信息，展示 加载按钮 -->
+  <!-- 缓存代码见js文件 -->
+  <block wx:else>
+    <!-- 两个大括号绑定javascript中的变量 -->
+    <text class="hello-motto">Hello, {{userInfo.nickName}}</text>
+    <l-button loading="{{true}}" l-class="lin-ui-start-button">登录中...</l-button>
+    <text class="loading-motto">稍等片刻</text>
+    <text class="loading-motto">马上就进入二次元哦!</text>
+  </block>
+</view>
+<!-- flex容器布局 -->

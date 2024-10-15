@@ -1,0 +1,19 @@
+<view class="container">
+  <image class="head-image" mode="aspectFill" src="{{postData.image}}"></image>
+  <view class="author-date">
+    <image class="avatar" src="{{postData.avatar}}"></image>
+    <text class="author">{{postData.author}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{postData.dateTime}}</text>
+  </view>
+  <text class="title">{{postData.title}}</text>
+  <view class="tool">
+    <view class="popularity">
+      <l-icon class="popularity-icon" name="like" color="#666" size="35"/>
+      <l-icon  class="popularity-icon" name="favor" color="#666" size="35"/>
+      <l-icon class="popularity-icon" name="share" color="#666" size="35"/>
+    </view>
+    <view class="horizon-line"></view>
+  </view>
+  <text class="post-content">{{postData.content}}</text>
+</view>

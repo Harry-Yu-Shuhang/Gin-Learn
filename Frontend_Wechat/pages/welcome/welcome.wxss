@@ -1,0 +1,61 @@
+/* pages/welcome/welcome.wxss */
+.container{
+  /* 设置成flex布局 */
+  display: flex; 
+  /* 垂直排列 */
+  flex-direction: column;
+  /* 水平居中 */
+  align-items: center;
+  background-color: #b3d4db;
+}
+
+.hello-motto{
+  margin-top: 120rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.loading-motto{
+  margin-top: 15rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.lin-ui-start-button{
+  border: 2px solid #405f80 !important;
+  width: 300rpx !important;
+  height: 80rpx !important;
+  font-size: 35rpx !important;
+  margin-top: 40rpx !important;
+  color: #405f80 !important;
+  background-color: #b3d4db !important;
+}
+
+.l-avatar{
+  margin-top: 160rpx;
+}
+
+/**userinfo的css样式**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200rpx;
+}
+/**userinfo的css样式到这里结束**/
+
+page{
+  background-color: #b3d4db;
+}

@@ -1,0 +1,46 @@
+<view>
+  <!-- swiper 滑块容器 实现滑动效果 -->
+  <!-- indicator-dots加入面板指示点 -->
+  <!-- circular循环播放,不写值默认为true -->
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" circular interval="4000" duration="1000">
+    <swiper-item>
+      <image src="/images/tabs/xiaogong_tab.png" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/tabs/xiaogong_tab_2.png" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/tabs/xiaogong_tab_3.jpg" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+
+<block wx:for="{{postList}}" wx:key="id">
+  <!-- 点击后跳转到文章内 -->
+  <view data-post-id="{{item.id}}" bind:tap="onGoToDetail" class="post-container">
+    <!-- 每一行用一个view，只有一个元素的不需要view -->
+    <view class="post-author-info">
+      <image class="post-author-avatar" src="{{item.avatar}}"></image>
+      <text class="post-author-name">{{item.author}}</text>
+      <text class="post-date">{{item.date}}</text>
+    </view>
+
+    <text class="post-title">{{item.title}}</text>
+
+    <image class="post-image" mode="aspectFill" src="{{item.image}}"></image>
+
+    <text class="post-abstract">{{item.abstract}}</text>
+
+    <view class="post-popularity">
+      <!-- <image class="post-like-image" src="/images/icon/chat.png"></image> -->
+      <!-- size单位是rpx -->
+      <l-icon class="post-like-icon" name="like" color="#666" size="28"/>
+      <text class="post-like-count">{{item.likes}}</text>
+      <l-icon class="post-like-icon" name="favor" color="#666" size="28"/>
+      <text class="post-like-count">{{item.stars}}</text>
+      <!-- <image class="post-like-image" src="/images/icon/view.png"></image> -->
+      <l-icon class="post-like-icon" name="eye" color="#666" size="30"/>
+      <text class="post-like-count" size="30">{{item.views}}</text>
+    </view>
+  </view>
+</block>
+</view>
